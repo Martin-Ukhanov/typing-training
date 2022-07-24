@@ -10,7 +10,13 @@ const Keyboard = (() => {
 
   const changeKey = () => {
     DOM.deactivateKey(currentKey);
-    currentKey = keys.charAt(Math.floor(Math.random() * keys.length));
+
+    let newKey;
+    do {
+      newKey = keys.charAt(Math.floor(Math.random() * keys.length));
+    } while (newKey === currentKey);
+
+    currentKey = newKey;
     DOM.activateKey(currentKey);
   };
 

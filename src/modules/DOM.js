@@ -42,9 +42,9 @@ const DOM = (() => {
   const streakShake = () => {
     const shake = [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(6px)' },
-      { transform: 'translateX(-6px)' },
-      { transform: 'translateX(6px)' },
+      { transform: 'translateX(10px)' },
+      { transform: 'translateX(-10px)' },
+      { transform: 'translateX(10px)' },
       { transform: 'translateX(0)' },
     ];
     const shakeTiming = {
