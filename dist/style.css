@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.key {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border: 4px solid white;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  transition: 0.2s;
+}
+
+.key.active {
+  color: black;
+  background-color: white;
+  animation: shake 0.4s infinite;
+}
+
+#back,
+#tab {
+  width: 6rem;
+}
+
+#caps,
+#enter {
+  width: 7.5rem;
+}
+
+#left-shift,
+#right-shift {
+  width: 10rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
